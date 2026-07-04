@@ -1,0 +1,92 @@
+:root {
+  color-scheme: light dark;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f7f2;
+  color: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(250, 204, 21, 0.18), transparent 24rem),
+    linear-gradient(135deg, #f7f7f2 0%, #e8f3ee 52%, #f6f0df 100%);
+}
+
+.app {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 24px;
+  padding: max(24px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right))
+    max(24px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
+}
+
+.test-button {
+  appearance: none;
+  min-width: 160px;
+  min-height: 56px;
+  border: 0;
+  border-radius: 8px;
+  background: #14532d;
+  color: #ffffff;
+  font: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0;
+  box-shadow: 0 14px 30px rgba(20, 83, 45, 0.24);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.test-button:hover {
+  background: #166534;
+}
+
+.test-button:focus-visible {
+  outline: 4px solid #facc15;
+  outline-offset: 4px;
+}
+
+.test-button:active {
+  transform: translateY(1px);
+}
+
+.result {
+  min-height: 34px;
+  margin: 0;
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background: #0b1220;
+    color: #f8fafc;
+  }
+
+  body {
+    background:
+      radial-gradient(circle at 18% 20%, rgba(250, 204, 21, 0.14), transparent 24rem),
+      linear-gradient(135deg, #0b1220 0%, #11251a 58%, #292112 100%);
+  }
+
+  .result {
+    color: #f8fafc;
+  }
+}
